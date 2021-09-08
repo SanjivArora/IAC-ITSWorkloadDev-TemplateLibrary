@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "newZoneName": {
+            "value": "Blair.Ken"
+        },
+        "newRecordName": {
+            "value": "WWW"
+        },
+        "firstRecordIPAddress": {
+            "value": "1.0.11.11"
+        },
+        "secondRecordIPAddress": {
+            "value": "1.0.12.12"
+        }
+    }
+}
