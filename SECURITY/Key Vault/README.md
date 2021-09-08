@@ -1,11 +1,15 @@
 # Description 
-This template deployes an A4V2 VM
+This template deployes keyvault
 ## Specs 
 
-- A4_v2
+For parameter settings---
 
-- 4 CPU
-
-- 8 GB
-
-- 40 GB (SSD)
+ },
+        "tenantId": {
+            "value": "## TO BE DEFINED ##"
+            Note: Azure active directory Tenant ID: Azure Active Directory-Overview--> Tenenat ID
+        },
+        "objectId": {
+            "value": "## TO BE DEFINED ##"
+             Note: App Registration Obkect ID: AppRegistrations--> Overview--> Managed Application in Local Directory--> Object ID
+        
