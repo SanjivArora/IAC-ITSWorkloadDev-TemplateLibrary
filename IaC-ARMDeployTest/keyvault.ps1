@@ -5,11 +5,11 @@
 Import-Module Az.KeyVault
 #write-host $environment
 #If {#($environment -eq 'DEV') {
-$KeyVault = "## TO BE DEFINED ##"
+$KeyVault = "kv-boriley-02"
 #HINT: KeyVault Name
 #}
 #Loading Default Secrets
-$secrets = Import-Csv '## TO BE DEFINED ##'
+$secrets = Import-Csv '_IAC-ITSWorkloadDev-TemplateLibrary/IaC-ARMDeployTest/keyvault.csv'
 #HINT: Drop Location
 function New-RandomPassword() {
     param (
