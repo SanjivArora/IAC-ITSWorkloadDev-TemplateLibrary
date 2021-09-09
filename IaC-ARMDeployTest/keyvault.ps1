@@ -33,6 +33,6 @@ foreach ($secret in $secrets) {
         $tmpsecret = Set-AzKeyVaultSecret -VaultName $KeyVault -Name $secret.name -SecretValue $tmpSecret
     }
     Else {
-        Write-Host "Secret is already in tne Key Vault. No change is required."
+        Write-Host "Secret is already in the Key Vault. No change is required."
     }
 }
