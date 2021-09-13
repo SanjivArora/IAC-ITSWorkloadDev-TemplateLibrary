@@ -5,7 +5,7 @@
 Import-Module Az.KeyVault
 #write-host $environment
 #If {#($environment -eq 'DEV') {
-$KeyVault = "kv-boriley-02"
+$KeyVault = "kvdemo-00"
 #HINT: KeyVault Name
 #}
 #Loading Default Secrets
