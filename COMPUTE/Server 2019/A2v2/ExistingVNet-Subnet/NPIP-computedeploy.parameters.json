@@ -6,7 +6,7 @@
             "value": "australiaeast"
         },
         "networkInterfaceName": {
-            "value": "/subscriptions/6740a99d-871d-47ed-954a-28105777c9c8/resourceGroups/IaC-ARMDeployTest-RG/providers/Microsoft.Network/networkInterfaces/mytestwindows10364"
+            "value": "Test-NIC"
         },
         "subnetName": {
             "value": "Subnet1"
