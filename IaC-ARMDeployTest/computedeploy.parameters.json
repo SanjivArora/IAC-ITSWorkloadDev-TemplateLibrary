@@ -12,14 +12,14 @@
             "value": "Subnet1"
         },
         "virtualNetworkName": {
-            "value": "VNet2"
+            "value": "VNet1"
         },
         "VirtualNetworkResourceGroup": {  
             "value": "IaC-ARMDeployTest-RG" 
         }, 
         "addressPrefixes": {
             "value": [
-                "10.0.0.0/24"
+                "10.0.0.0/16"
             ]
         },
         "subnets": {
