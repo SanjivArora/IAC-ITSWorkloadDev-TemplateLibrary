@@ -12,7 +12,7 @@
             "value": "Subnet1"
         },
         "virtualNetworkName": {
-            "value": "VNet1"
+            "value": "VNet2"
         },
         "VirtualNetworkResourceGroup": {  
             "value": "IaC-ARMDeployTest-RG" 
