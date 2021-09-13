@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "keyVaultName": {
-            "value": "kv-boriley-02"
+            "value": "kvdemo-00"
         },
         "location": {
             "value": "australiaeast"
