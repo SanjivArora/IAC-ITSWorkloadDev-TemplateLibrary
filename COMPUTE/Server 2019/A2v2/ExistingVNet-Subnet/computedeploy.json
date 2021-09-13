@@ -20,6 +20,15 @@
       "subnets":{
          "type":"array"
       },
+      "publicIpAddressName":{
+         "type":"string"
+      },
+      "publicIpAddressType":{
+         "type":"string"
+      },
+      "publicIpAddressSku":{
+         "type":"string"
+      },
       "virtualMachineName":{
          "type":"string"
       },
@@ -83,8 +92,9 @@
          "apiVersion":"2020-08-01",
          "location":"[parameters('location')]",
          "dependsOn":[
-            "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
-           ],
+            "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
+            "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"
+         ],
          "properties":{
             "ipConfigurations":[
                {
@@ -93,8 +103,11 @@
                      "subnet":{
                         "id":"[variables('subnetRef')]"
                      },
-                     "privateIPAllocationMethod":"Dynamic"
+                     "privateIPAllocationMethod":"Dynamic",
+                     "publicIpAddress":{
+                        "id":"[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
                      }
+                  }
                }
             ]
          },
@@ -110,6 +123,19 @@
                "addressPrefixes":"[parameters('addressPrefixes')]"
             },
             "subnets":"[parameters('subnets')]"
+         },
+         "tags":"[parameters('resourceTags')]"
+      },
+      {
+         "name":"[parameters('publicIpAddressName')]",
+         "type":"Microsoft.Network/publicIpAddresses",
+         "apiVersion":"2019-02-01",
+         "location":"[parameters('location')]",
+         "properties":{
+            "publicIpAllocationMethod":"[parameters('publicIpAddressType')]"
+         },
+         "sku":{
+            "name":"[parameters('publicIpAddressSku')]"
          },
          "tags":"[parameters('resourceTags')]"
       },

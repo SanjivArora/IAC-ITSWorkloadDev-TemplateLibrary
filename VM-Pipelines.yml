@@ -29,6 +29,6 @@ steps:
     resourceGroupName: 'IaC-ARMDeployTest-RG'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
-    csmFile: '/home/vsts/work/1/a/NPIP-computedeploy.json'
-    csmParametersFile: '/home/vsts/work/1/a/NPIP-computedeploy.parameters.json'
+    csmFile: '/home/vsts/work/1/a/computedeploy.json'
+    csmParametersFile: '/home/vsts/work/1/a/computedeploy.parameters.json'
     deploymentMode: 'Incremental'
