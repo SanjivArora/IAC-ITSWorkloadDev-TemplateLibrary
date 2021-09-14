@@ -29,9 +29,9 @@ steps:
     resourceGroupName: 'IaC-ARMDeployTest-RG'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
-    csmFile: '/home/vsts/work/1/a/identitydeploy.json'
-    csmParametersFile: '/home/vsts/work/1/a/identitydeploy.parameters.json'
+    csmFile: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\identitydeploy.json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\identitydeploy.parameters.json'
     deploymentMode: 'Incremental'
 - task: PowerShell@2
   inputs:
-    filePath: '/home/vsts/work/1/a/IaC-ARMDeployTest\keyvault.ps1'
+    filePath: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\keyvault.ps1'
