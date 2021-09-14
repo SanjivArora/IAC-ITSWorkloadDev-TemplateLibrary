@@ -34,4 +34,4 @@ steps:
     deploymentMode: 'Incremental'
 - task: PowerShell@2
   inputs:
-    filePath: 'IaC-ARMDeployTest\keyvault.ps1'
+    filePath: '/home/vsts/work/1/a/IaC-ARMDeployTest\keyvault.ps1'
