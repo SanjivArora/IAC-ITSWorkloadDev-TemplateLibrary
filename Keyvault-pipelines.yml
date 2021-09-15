@@ -37,3 +37,4 @@ steps:
     azureSubscription: 'SP_ItsWorkloadDEV'
     ScriptType: 'FilePath'
     ScriptPath: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\keyvault.ps1'
+    azurePowerShellVersion: 'LatestVersion'
