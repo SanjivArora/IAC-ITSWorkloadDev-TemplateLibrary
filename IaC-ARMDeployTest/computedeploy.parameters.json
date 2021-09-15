@@ -59,7 +59,7 @@
         "adminPassword": {
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/fb7c94b5-7744-429b-a7ae-db1458359f71/resourceGroups/IaC-ARMDeployTest-RG/providers/Microsoft.KeyVault/vaults/kvdemo-04"
+                    "id": "/subscriptions/fb7c94b5-7744-429b-a7ae-db1458359f71/resourceGroups/IaC-ARMDeployTest-RG/providers/Microsoft.KeyVault/vaults/kvdemo-05"
                 },
                 "secretName": "NewAdmin"
             }
