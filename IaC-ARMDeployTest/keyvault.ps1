@@ -11,15 +11,17 @@ $KeyVault = "kvdemo-04"
 #Loading Default Secrets
 $secrets = Import-Csv 'IaC-ARMDeployTest\keyvault.csv'
 #HINT: Drop Location
+Add-Type -AssemblyName 'System.Web'
 function New-RandomPassword() {
     param (
         [int]$size
     )
     $minLength = 8 ## characters
     $maxLength = $size ## characters
-    $lengh = Get-Random -Minimum $minLength -Maximum $maxLength
+    $length = Get-Random -Minimum $minLength -Maximum $maxLength
     $nonAlphaChars = $minLength
-    $password = membership.GeneratePassword($lengh, $nonAlphaChars);
+    $password = [System.Web.Security.Membership]::GeneratePassword($length, $nonAlphaChars)
+
     return $password
 }
 foreach ($secret in $secrets) {
