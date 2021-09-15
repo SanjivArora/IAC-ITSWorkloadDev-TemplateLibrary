@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "keyVaultName": {
-            "value": "kvdemo-03"
+            "value": "kvdemo-04"
         },
         "location": {
             "value": "australiaeast"
