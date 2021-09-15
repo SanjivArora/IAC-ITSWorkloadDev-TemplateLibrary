@@ -1,5 +1,5 @@
 #param (
-##    [string] $environment
+#    [string] $environment
 #)
 #Global
 Import-Module Az.KeyVault
