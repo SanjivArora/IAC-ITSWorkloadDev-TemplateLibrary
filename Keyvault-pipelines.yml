@@ -34,4 +34,12 @@ steps:
     deploymentMode: 'Incremental'
 - task: PowerShell@2
   inputs:
+    targetType: 'inline'
+    script: '$PSversiontable'
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force'
+- task: PowerShell@2
+  inputs:
     filePath: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\keyvault.ps1'
