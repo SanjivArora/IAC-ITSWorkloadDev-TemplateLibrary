@@ -19,7 +19,7 @@ function New-RandomPassword() {
     $maxLength = $size ## characters
     $lengh = Get-Random -Minimum $minLength -Maximum $maxLength
     $nonAlphaChars = $minLength
-    $password = [system.web.security.membership]::GeneratePassword($lengh, $nonAlphaChars)
+    $password = membership.GeneratePassword($lengh, $nonAlphaChars);
     return $password
 }
 foreach ($secret in $secrets) {
