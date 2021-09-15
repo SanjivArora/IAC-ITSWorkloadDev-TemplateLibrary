@@ -16,7 +16,7 @@ function New-RandomPassword() {
     param (
         [int]$size
     )
-    $minLength = 8 ## characters
+    $minLength = 15 ## characters
     $maxLength = $size ## characters
     $length = Get-Random -Minimum $minLength -Maximum $maxLength
     $nonAlphaChars = $minLength
