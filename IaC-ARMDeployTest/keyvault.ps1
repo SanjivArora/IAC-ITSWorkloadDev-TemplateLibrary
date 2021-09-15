@@ -14,10 +14,10 @@ $secrets = Import-Csv 'IaC-ARMDeployTest\keyvault.csv'
 Add-Type -AssemblyName 'System.Web'
 function New-RandomPassword() {
     param (
-        [int]$NonAlpha
+        [int]$size
     )
-    $minLength = 14 ## characters
-    $NonAlpha = $size ## characters
+    $minLength = 15 ## characters
+    $maxLength = $size ## characters
     $length = Get-Random -Minimum $minLength -Maximum $maxLength
     $nonAlphaChars = $minLength
     $password = [System.Web.Security.Membership]::GeneratePassword($length, $nonAlphaChars)
@@ -26,7 +26,7 @@ function New-RandomPassword() {
 }
 foreach ($secret in $secrets) {
     If ($secret.secret -eq 'random') {
-        $tmpSecret = ConvertTo-SecureString (New-RandomPassword -size 3) -AsPlainText -Force
+        $tmpSecret = ConvertTo-SecureString (New-RandomPassword -size 14) -AsPlainText -Force
     }
     Else {
         $tmpSecret = ConvertTo-SecureString $secret.secret -AsPlainText -Force
