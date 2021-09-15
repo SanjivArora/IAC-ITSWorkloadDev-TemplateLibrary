@@ -26,7 +26,7 @@ function New-RandomPassword() {
 }
 foreach ($secret in $secrets) {
     If ($secret.secret -eq 'random') {
-        $tmpSecret = ConvertTo-SecureString (New-RandomPassword -size 14) -AsPlainText -Force
+        $tmpSecret = ConvertTo-SecureString (New-RandomPassword -size 18) -AsPlainText -Force
     }
     Else {
         $tmpSecret = ConvertTo-SecureString $secret.secret -AsPlainText -Force
