@@ -9,7 +9,7 @@ $KeyVault = "kvdemo-04"
 #HINT: KeyVault Name
 #}
 #Loading Default Secrets
-$secrets = Import-Csv '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\keyvault.csv'
+$secrets = Import-Csv 'IaC-ARMDeployTest\keyvault.csv'
 #HINT: Drop Location
 function New-RandomPassword() {
     param (
