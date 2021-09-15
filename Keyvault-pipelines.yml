@@ -34,7 +34,6 @@ steps:
     deploymentMode: 'Incremental'
 - task: AzurePowerShell@5
   inputs:
-    azureSubscription: 'ITS WORKLOAD DEV (fb7c94b5-7744-429b-a7ae-db1458359f71)'
+    azureSubscription: 'SP_ItsWorkloadDEV'
     ScriptType: 'FilePath'
     ScriptPath: '$(System.DefaultWorkingDirectory).\IaC-ARMDeployTest\keyvault.ps1'
-    azurePowerShellVersion: 'LatestVersion'
