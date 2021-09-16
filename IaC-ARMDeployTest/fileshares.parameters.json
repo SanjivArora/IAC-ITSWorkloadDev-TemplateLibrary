@@ -8,9 +8,6 @@
         "sharePrefix": {
             "value": "azfs000"
         },
-        "location": {
-            "value": "australiaeast"
-        },
         "shareCopy": {
             "value": 1
         }
