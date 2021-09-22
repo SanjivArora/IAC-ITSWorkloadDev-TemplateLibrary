@@ -21,7 +21,7 @@
             "value": 2
         },
         "vmSize": {
-            "value": "Standard_A1"
+            "value": "Standard_A2_v2"
         }
     }
 }
