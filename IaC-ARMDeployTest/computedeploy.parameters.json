@@ -1,89 +1,27 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.1",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
     "parameters": {
-        "location": {
-            "value": "australiaeast"
-        },
-        "networkInterfaceName": {
-            "value": "Test-NIC"
-        },
-        "subnetName": {
-            "value": "Subnet1"
-        },
-        "virtualNetworkName": {
-            "value": "VNet1"
-        },
-        "VirtualNetworkResourceGroup": {  
-            "value": "IaC-ARMDeployTest-RG" 
-        }, 
-        "addressPrefixes": {
-            "value": [
-                "10.0.0.0/16"
-            ]
-        },
-        "subnets": {
-            "value": [
-                {
-                    "name": "Subnet1",
-                    "properties": {
-                        "addressPrefix": "10.0.1.0/24"
-                    }
-                }
-            ]
-        },
-        "virtualMachineName": {
-            "value": "TestVM1"
-        },
-        "virtualMachineComputerName": {
-            "value": "TestVM1"
-        },
-        "osDiskType": {
-            "value": "Standard_LRS"
-        },
-        "virtualMachineSize": {
-            "value": "Standard_A2_v2"
+        "vmName": {
+            "value": "WindowsVM"
         },
         "adminUsername": {
-            "value": "adminuser"
+            "value": "vmadmin"
         },
         "adminPassword": {
-            "reference": {
-                "keyVault": {
-                    "id": "/subscriptions/fb7c94b5-7744-429b-a7ae-db1458359f71/resourceGroups/IaC-ARMDeployTest-RG/providers/Microsoft.KeyVault/vaults/kvdemo-05"
-                },
-                "secretName": "NewAdmin"
-            }
+            "value": "[concat('Subscription#', subscription().subscriptionId)]"
         },
-        "patchMode": {
-            "value": "AutomaticByOS"
+        "imageSku": {
+            "value": "2019-Datacenter"
         },
-        "enableHotpatching": {
-            "value": false
+        "storageAccountType": {
+            "value": "Standard_LRS"
         },
-        "autoShutdownStatus": {
-            "value": "enabled"
+        "vmCount": {
+            "value": 2
         },
-        "autoShutdownTime": {
-            "value": "19:00"
-        },
-        "autoShutdownTimeZone": {
-            "value": "New Zealand Standard Time"
-        },
-        "autoShutdownNotificationStatus": {
-            "value": "Enabled"
-        },
-        "autoShutdownNotificationLocale": {
-            "value": "en"
-        },
-        "autoShutdownNotificationEmail": {
-            "value": "sarora@ricoh.co.nz"
-        },
-        "resourceTags": {
-            "value": {
-                "Environment": "Test",
-                "Application": "Testapp"
-    }
+        "vmSize": {
+            "value": "Standard_A1"
         }
     }
 }
