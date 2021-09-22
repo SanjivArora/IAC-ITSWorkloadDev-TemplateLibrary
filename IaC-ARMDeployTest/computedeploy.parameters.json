@@ -32,15 +32,6 @@
                 }
             ]
         },
-        "publicIpAddressName": {
-            "value": "Test"
-        },
-        "publicIpAddressType": {
-            "value": "Dynamic"
-        },
-        "publicIpAddressSku": {
-            "value": "Basic"
-        },
         "virtualMachineName": {
             "value": "TestVM1"
         },
